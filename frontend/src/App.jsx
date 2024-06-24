@@ -3,7 +3,7 @@ import { useState } from "react";
 import "./App.css";
 
 import AuthPage from "./AuthPage";
-import ChatsPage from "./ChatsPage";
+import ChatsPage from "./ChatPage";
 
 function App() {
   const [user, setUser] = useState(undefined);
@@ -12,6 +12,7 @@ function App() {
     return <AuthPage onAuth={(user) => setUser(user)} />;
   } else {
     return <ChatsPage user={user} />;
+  
   }
 }
 
